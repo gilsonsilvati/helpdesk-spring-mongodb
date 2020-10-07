@@ -21,7 +21,7 @@ public class Change {
     @DBRef
     private User user;
 
-    private LocalDateTime data;
+    private LocalDateTime date;
     private Status status;
 
 }
