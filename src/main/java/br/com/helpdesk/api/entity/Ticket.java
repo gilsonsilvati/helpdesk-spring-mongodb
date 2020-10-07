@@ -3,6 +3,7 @@ package br.com.helpdesk.api.entity;
 import br.com.helpdesk.api.entity.enums.Priority;
 import br.com.helpdesk.api.entity.enums.Status;
 import lombok.Data;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.MongoId;
@@ -31,6 +32,7 @@ public class Ticket {
     private String description;
     private String image;
 
+    @Transient
     private List<Change> changes;
 
 }
