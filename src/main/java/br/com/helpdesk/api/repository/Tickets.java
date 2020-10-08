@@ -1,7 +1,6 @@
 package br.com.helpdesk.api.repository;
 
 import br.com.helpdesk.api.entity.Ticket;
-import br.com.helpdesk.api.entity.User;
 import br.com.helpdesk.api.entity.enums.Priority;
 import br.com.helpdesk.api.entity.enums.Status;
 import org.springframework.data.domain.Page;
@@ -18,13 +17,13 @@ public interface Tickets extends MongoRepository<Ticket, String> {
             String title, Status status, Priority priority, Pageable pageable
     );
 
-    Page<Ticket> findByTitleIgnoreCaseContainingAndStatusAndPriorityUserIdOrderByDateDesc(
-            String title, Status status, Priority priority, Pageable pageable
-    );
+//    Page<Ticket> findByTitleIgnoreCaseContainingAndStatusAndPriorityUserIdOrderByDateDesc(
+//            String title, Status status, Priority priority, Pageable pageable
+//    );
 
-    Page<Ticket> findByTitleIgnoreCaseContainingAndStatusAndPriorityUserOrderByDateDesc(
-            String title, Status status, Priority priority, Pageable pageable
-    );
+//    Page<Ticket> findByTitleIgnoreCaseContainingAndStatusAndPriorityUserOrderByDateDesc(
+//            String title, Status status, Priority priority, Pageable pageable
+//    );
 
     Page<Ticket> findByNumber(Integer number, Pageable pageable);
 
