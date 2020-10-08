@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface Changes extends MongoRepository<Change, String> {
 
-    Iterable<Change> findByTicketIdOrderByDateChangeDesc(String ticketId);
+    Iterable<Change> findByTicketIdOrderByDateDesc(String ticketId);
 
 }
