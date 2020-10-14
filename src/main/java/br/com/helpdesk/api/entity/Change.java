@@ -2,9 +2,9 @@ package br.com.helpdesk.api.entity;
 
 import br.com.helpdesk.api.entity.enums.Status;
 import lombok.Data;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.MongoId;
 
 import java.time.LocalDateTime;
 
@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Data
 public class Change {
 
-    @MongoId
+    @Id
     private String id;
 
     @DBRef

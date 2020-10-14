@@ -3,10 +3,10 @@ package br.com.helpdesk.api.entity;
 import br.com.helpdesk.api.entity.enums.Priority;
 import br.com.helpdesk.api.entity.enums.Status;
 import lombok.Data;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.MongoId;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.List;
 @Data
 public class Ticket {
 
-    @MongoId
+    @Id
     private String id;
 
     @DBRef(lazy = true)

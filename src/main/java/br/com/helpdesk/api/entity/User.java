@@ -2,9 +2,9 @@ package br.com.helpdesk.api.entity;
 
 import br.com.helpdesk.api.entity.enums.Profile;
 import lombok.Data;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.MongoId;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
 @Data
 public class User {
 
-    @MongoId
+    @Id
     private String id;
 
     @Indexed(unique = true)
